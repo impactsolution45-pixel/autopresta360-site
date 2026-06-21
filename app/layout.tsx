@@ -26,7 +26,7 @@ const mono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "AutoPresta 360 — L'application de gestion complète pour les pros de l'automobile",
   description:
-    "Devis, factures, stock, clients, base technique Lishi et conformité e-facturation : AutoPresta 360 centralise toute la gestion des professionnels de l'automobile dans un seul tableau de bord.",
+    "Devis, factures, stock, clients et conformité e-facturation : AutoPresta 360 centralise la gestion des pros de la serrurerie auto, reprogrammation ECU, carrosserie légère, detailing, covering et débosselage sans peinture.",
   metadataBase: new URL("https://autopresta360.com"),
   openGraph: {
     title: "AutoPresta 360",

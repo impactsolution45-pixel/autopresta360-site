@@ -20,9 +20,9 @@ export default function Hero() {
           </h1>
 
           <p className="mt-6 max-w-xl text-balance text-lg leading-relaxed text-mute">
-            AutoPresta 360 réunit devis, factures, stock, clients et base technique de
-            serrurerie automobile dans une seule application — pensée par un professionnel
-            du métier, pour les professionnels du métier.
+            AutoPresta 360 réunit devis, factures, stock et clients dans une seule
+            application — pour la serrurerie, la reprogrammation ECU, la carrosserie
+            légère, le detailing, le covering et le débosselage sans peinture.
           </p>
 
           <div className="mt-9 flex flex-wrap items-center gap-4">

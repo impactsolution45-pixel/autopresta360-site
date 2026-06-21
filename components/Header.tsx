@@ -6,6 +6,7 @@ const APP_URL = "https://app.autopresta360.com";
 
 const NAV = [
   { href: "#fonctionnalites", label: "Fonctionnalités" },
+  { href: "#tarifs", label: "Tarifs" },
   { href: "#facturation", label: "Conformité 2026" },
   { href: "#apercu", label: "Aperçu" },
   { href: "#contact", label: "Contact" },

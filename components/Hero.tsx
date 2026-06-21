@@ -15,7 +15,7 @@ export default function Hero() {
           </p>
 
           <h1 className="text-balance font-display text-[2.6rem] font-semibold leading-[1.05] text-ash sm:text-6xl">
-            Du diagnostic à la facture,{" "}
+            De la prise en charge à la facture,{" "}
             <span className="text-cyan">tout votre garage</span> dans un seul tableau de bord.
           </h1>
 

@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const APP_URL = "https://app.autopresta360.com";
+const APP_URL = "https://mon-app-devis.vercel.app";
 
 export default function Hero() {
   return (

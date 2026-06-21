@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-const APP_URL = "https://app.autopresta360.com";
+const APP_URL = "https://mon-app-devis.vercel.app";
 
 const PLANS = [
   {

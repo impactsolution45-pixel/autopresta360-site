@@ -46,3 +46,26 @@ textarea:focus-visible {
     linear-gradient(90deg, rgba(56, 189, 248, 0.07) 1px, transparent 1px);
   background-size: 44px 44px;
 }
+
+.prose-legal h2 {
+  @apply font-display text-xl font-semibold text-ash mt-10 mb-3 border-b border-line pb-2;
+}
+.prose-legal h3 {
+  @apply font-display text-base font-semibold text-ash mt-6 mb-2;
+}
+.prose-legal p {
+  @apply text-mute text-sm leading-relaxed mb-3;
+}
+.prose-legal ul {
+  @apply list-disc list-inside space-y-1 text-sm text-mute mb-3 ml-3;
+}
+.prose-legal a {
+  @apply text-cyan underline underline-offset-2 hover:text-ash transition-colors;
+}
+.prose-legal strong {
+  @apply text-ash font-semibold;
+}
+.prose-legal .info-block {
+  @apply rounded-xl border border-line bg-panel2 p-5 text-sm text-mute;
+}
+

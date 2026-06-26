@@ -6,7 +6,7 @@ const APP_URL = "https://mon-app-devis.vercel.app";
 
 const PLANS = [
   {
-    nom: "Basique",
+    nom: "Formule Basique TTC",
     description: "Pour démarrer et gérer l'essentiel au quotidien",
     prixMensuel: 19.9,
     prixAnnuel: 199,
@@ -23,7 +23,7 @@ const PLANS = [
     exclus: ["Comptabilité", "Stock", "Scan facture", "Scan avancé", "Capture client", "Générateur de story"],
   },
   {
-    nom: "Pro",
+    nom: "Formule Pro TTC",
     description: "Toutes les fonctionnalités, sans limite",
     prixMensuel: 29.9,
     prixAnnuel: 299,

@@ -11,19 +11,19 @@ export default function MentionsLegales() {
       <section>
         <h2>Éditeur du site</h2>
         <div className="info-block">
-          <p><strong>Raison sociale :</strong> [NOM DE VOTRE SOCIÉTÉ / NOM PRÉNOM si auto-entrepreneur]</p>
-          <p><strong>Forme juridique :</strong> [SAS / SARL / EI / Auto-entrepreneur…]</p>
-          <p><strong>SIRET :</strong> [000 000 000 00000]</p>
-          <p><strong>Adresse du siège :</strong> [Adresse complète]</p>
-          <p><strong>Téléphone :</strong> [+33 X XX XX XX XX]</p>
+          <p><strong>Raison sociale :</strong> [BOURDIN Sébastien]</p>
+          <p><strong>Forme juridique :</strong> [Auto-entrepreneur]</p>
+          <p><strong>SIRET :</strong> [123 309 873321]</p>
+          <p><strong>Adresse du siège :</strong> [29, rue de la graillotte 45290 NOGENT-SUR-VERNISSON]</p>
+          <p><strong>Téléphone :</strong> [+33 7 49 41 90 02]</p>
           <p><strong>Email :</strong> <a href="mailto:contact@autopresta360.com">contact@autopresta360.com</a></p>
-          <p><strong>N° TVA intracommunautaire :</strong> [FR XX XXXXXXXXX]</p>
+          <p><strong>N° TVA intracommunautaire :</strong> [non assujeti à la TVA]</p>
         </div>
       </section>
 
       <section>
         <h2>Directeur de la publication</h2>
-        <p>[Prénom NOM], en qualité de [gérant / président / propriétaire].</p>
+        <p>[Sébastien BOURDIN], en qualité de [gérant].</p>
       </section>
 
       <section>

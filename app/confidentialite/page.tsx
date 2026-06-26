@@ -11,7 +11,7 @@ export default function Confidentialite() {
       <section>
         <h2>1. Responsable du traitement</h2>
         <div className="info-block">
-          <p><strong>[NOM DE VOTRE SOCIÉTÉ / PRÉNOM NOM]</strong></p>
+          <p><strong>[Sébastien BOURDIN]</strong></p>
           <p>SIRET : [000 000 000 00000]</p>
           <p>Email : <a href="mailto:contact@autopresta360.com">contact@autopresta360.com</a></p>
         </div>

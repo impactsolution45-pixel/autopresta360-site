@@ -15,8 +15,8 @@ export default function Hero() {
           </p>
 
           <h1 className="text-balance font-display text-[2.6rem] font-semibold leading-[1.05] text-ash sm:text-6xl">
-            De la prise en charge à la facture,{" "}
-            <span className="text-cyan">tout votre garage</span> dans un seul tableau de bord.
+            Le logiciel tout-en-un,{" "}
+            <span className="text-cyan">conçu pour les professionnels</span> de l'automobile.
           </h1>
 
           <p className="mt-6 max-w-xl text-balance text-lg leading-relaxed text-mute">

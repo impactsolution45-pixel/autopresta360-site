@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const APP_URL = "https://app.autopresta360.com";
+const APP_URL = "https://mon-app-devis.vercel.app";
 
 const LEGAL_LINKS = [
   { href: "/mentions-legales", label: "Mentions légales" },
@@ -76,7 +76,7 @@ export default function Footer() {
             © {year} AutoPresta 360 — Tous droits réservés
           </p>
           <p className="font-mono text-xs text-mute">
-            Fait avec ☕ pour les pros de l'auto
+            Fait avec passion pour les pros de l'auto
           </p>
         </div>
       </div>

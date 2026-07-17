@@ -122,8 +122,9 @@ export default function Pricing() {
                     {prix.toFixed(billing === "mensuel" ? 2 : 0)}€ {/* Affichage du prix formaté */}
                   </span>
                   <span className="text-sm text-mute">/{billing === "mensuel" ? "mois" : "an"}</span>
+                  {/* Économies affichées pour l'option annuelle */}
                   {billing === "annuel" && (
-                    <p className="mt-1 text-xs text-leaf">Économisez {economie.toFixed(0)}€ par an</p> {/* Économies affichées pour l'option annuelle */}
+                    <p className="mt-1 text-xs text-leaf">Économisez {economie.toFixed(0)}€ par an</p>
                   )}
                 </div>
 

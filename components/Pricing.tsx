@@ -4,51 +4,59 @@ import { useState } from "react";
 
 const APP_URL = "https://mon-app-devis.vercel.app";
 
+// Définition des différents plans tarifaires disponibles
 const PLANS = [
   {
-    nom: "Formule Basique TTC",
-    description: "Pour démarrer et gérer l'essentiel au quotidien",
-    prixMensuel: 19.9,
-    prixAnnuel: 199,
-    accent: "cyan" as const,
-    recommande: false,
+    nom: "Formule Basique TTC", // Nom du plan
+    description: "Pour démarrer et gérer l'essentiel au quotidien", // Description succincte des fonctionnalités
+    prixMensuel: 19.9, // Prix mensuel du plan
+    prixAnnuel: 199, // Prix annuel du plan
+    accent: "cyan" as const, // Couleur d'accentuation pour le plan
+    recommande: false, // Indique si ce plan est recommandé
     inclus: [
-      "Tableau de bord",
-      "Clients & véhicules",
-      "Interventions",
-      "Calendrier",
-      "Téléphonie",
-      "Forum Pro",
+      "Tableau de bord", // Fonctionnalité de gestion des données
+      "Clients & véhicules", // Gestion des clients et de leurs véhicules
+      "Interventions", // Planification et suivi des interventions réalisées
+      "Calendrier", // Outil de planification
+      "Téléphonie", // Fonctionnalité de téléphonie intégrée
+      "Forum Pro", // Accès à une communauté professionnelle
     ],
-    exclus: ["Comptabilité", "Stock", "Scan facture", "Scan avancé", "Capture client", "Générateur de story"],
+    exclus: [
+      "Comptabilité", // Fonctionnalité non incluse
+      "Stock", // Gestion de stock non incluse
+      "Scan facture", // Fonctionnalité de scan de facture non incluse
+      "Scan avancé", // Fonctionnalité de scan avancé non incluse
+      "Capture client", // Outil de capture de données clients non inclus
+      "Générateur de story", // Outil de création de contenu non inclus
+    ],
   },
   {
-    nom: "Formule Pro TTC",
-    description: "Toutes les fonctionnalités, sans limite",
-    prixMensuel: 29.9,
-    prixAnnuel: 299,
-    accent: "violet" as const,
-    recommande: true,
+    nom: "Formule Pro TTC", // Nom du plan Pro
+    description: "Toutes les fonctionnalités, sans limite", // Description mettant en avant l'abondance de fonctionnalités
+    prixMensuel: 29.9, // Prix mensuel du plan Pro
+    prixAnnuel: 299, // Prix annuel du plan Pro
+    accent: "violet" as const, // Couleur d'accentuation pour le plan Pro
+    recommande: true, // Indique que ce plan est recommandé
     inclus: [
-      "Tableau de bord",
-      "Clients & véhicules",
-      "Interventions",
-      "Calendrier",
-      "Téléphonie",
-      "Forum Pro",
-      "Comptabilité",
-      "Stock",
-      "Scan facture",
-      "Scan avancé",
-      "Capture client",
-      "Générateur de story",
+      "Tableau de bord", // Toutes les fonctionnalités de base
+      "Clients & véhicules", // Gestion avancée des clients et véhicules
+      "Interventions", // Planification et suivi détaillé des interventions
+      "Calendrier", // Outil de planification complet
+      "Téléphonie", // Fonctionnalité de téléphonie intégrée
+      "Forum Pro", // Accès à la communauté professionnelle
+      "Comptabilité", // Gestion comptable incluse
+      "Stock", // Gestion des stocks incluse
+      "Scan facture", // Fonctionnalité de scan de facture incluse
+      "Scan avancé", // Fonctionnalité de scan avancé incluse
+      "Capture client", // Outil de capture de données clients inclus
+      "Générateur de story", // Outil de création de contenu inclus
     ],
-    exclus: [],
+    exclus: [], // Aucune fonctionnalité exclue
   },
 ] as const;
 
 export default function Pricing() {
-  const [billing, setBilling] = useState<"mensuel" | "annuel">("mensuel");
+  const [billing, setBilling] = useState<"mensuel" | "annuel">("mensuel"); // État pour gérer le type de facturation (mensuel ou annuel)
 
   return (
     <section id="tarifs" className="border-t border-line bg-panel py-24">
@@ -81,15 +89,15 @@ export default function Pricing() {
               billing === "annuel" ? "bg-cyan text-ink" : "text-mute hover:text-ash"
             }`}
           >
-            Annuel <span className="text-leaf">· -15%</span>
+            Annuel <span className="text-leaf">· -15%</span> {/* Remise de 15% pour le paiement annuel */}
           </button>
         </div>
 
         <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 md:max-w-3xl">
           {PLANS.map((p) => {
-            const prix = billing === "mensuel" ? p.prixMensuel : p.prixAnnuel;
-            const economie = p.prixMensuel * 12 - p.prixAnnuel;
-            const isViolet = p.accent === "violet";
+            const prix = billing === "mensuel" ? p.prixMensuel : p.prixAnnuel; // Prix selon le type de facturation sélectionné
+            const economie = p.prixMensuel * 12 - p.prixAnnuel; // Calcul des économies pour le paiement annuel
+            const isViolet = p.accent === "violet"; // Vérification de la couleur d'accentuation
 
             return (
               <div
@@ -105,17 +113,17 @@ export default function Pricing() {
                 )}
 
                 <h3 className={`font-display text-xl font-semibold ${isViolet ? "text-violet" : "text-cyan"}`}>
-                  {p.nom}
+                  {p.nom} {/* Affichage du nom du plan */}
                 </h3>
-                <p className="mt-1 text-sm text-mute">{p.description}</p>
+                <p className="mt-1 text-sm text-mute">{p.description}</p> {/* Affichage de la description du plan */}
 
                 <div className="mt-6">
                   <span className="font-display text-4xl font-semibold text-ash">
-                    {prix.toFixed(billing === "mensuel" ? 2 : 0)}€
+                    {prix.toFixed(billing === "mensuel" ? 2 : 0)}€ {/* Affichage du prix formaté */}
                   </span>
                   <span className="text-sm text-mute">/{billing === "mensuel" ? "mois" : "an"}</span>
                   {billing === "annuel" && (
-                    <p className="mt-1 text-xs text-leaf">Économisez {economie.toFixed(0)}€ par an</p>
+                    <p className="mt-1 text-xs text-leaf">Économisez {economie.toFixed(0)}€ par an</p> {/* Économies affichées pour l'option annuelle */}
                   )}
                 </div>
 
@@ -125,20 +133,20 @@ export default function Pricing() {
                     isViolet ? "bg-violet text-white" : "bg-cyan text-ink"
                   }`}
                 >
-                  Commencer avec {p.nom}
+                  Commencer avec {p.nom} {/* Lien pour démarrer avec le plan sélectionné */}
                 </a>
 
                 <ul className="mt-8 space-y-2.5">
                   {p.inclus.map((f) => (
                     <li key={f} className="flex items-start gap-2 text-sm text-ash">
                       <span className="mt-0.5 text-leaf">✓</span>
-                      {f}
+                      {f} {/* Affichage des fonctionnalités incluses */}
                     </li>
                   ))}
                   {p.exclus.map((f) => (
                     <li key={f} className="flex items-start gap-2 text-sm text-mute/50">
                       <span className="mt-0.5">–</span>
-                      {f}
+                      {f} {/* Affichage des fonctionnalités excluses */}
                     </li>
                   ))}
                 </ul>

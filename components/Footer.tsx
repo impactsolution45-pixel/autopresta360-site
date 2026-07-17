@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const APP_URL = "https://mon-app-devis.vercel.app";
+const APP_URL = "https://app.autopresta360.fr/";
 
 const LEGAL_LINKS = [
   { href: "/mentions-legales", label: "Mentions légales" },

@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import ScrollGauge from "./ScrollGauge";
 
-const APP_URL = "https://mon-app-devis.vercel.app";
+const APP_URL = "https://app.autopresta360.fr";
 
 const NAV = [
   { href: "#fonctionnalites", label: "Fonctionnalités" },
